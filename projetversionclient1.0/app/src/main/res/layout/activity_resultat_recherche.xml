@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ecc.projetversionclient10.ResultatRecherche">
+    <TextView
+        android:id="@+id/TextResultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Liste des résultats: " />
+
+    <ListView
+        android:id="@+id/listeResultat"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/TextResultat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/RestoSelectionne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vous avez selectionné: "
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/Consulter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/listeResultat"
+        android:layout_below="@id/listeResultat"
+        android:onClick="onClickConsulter"
+        android:padding="5dp"
+        android:text="Consulter" />
+
+    <Button
+        android:id="@+id/BtnRsltAnnuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Consulter"
+        android:onClick="onClickAnnulerRslt"
+        android:layout_alignTop="@id/Consulter"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Retour" />
+</RelativeLayout>

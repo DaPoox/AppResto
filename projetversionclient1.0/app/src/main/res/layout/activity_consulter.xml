@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ecc.projetversionclient10.Consulter">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Image: -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+             <!-- Nom Restaurant: -->
+            <TextView
+                android:id="@+id/textNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garantita"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/imageView"/>
+
+            <!-- adresse -->
+            <TextView
+                android:id="@+id/textAdresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Rue Thomas Mann, paris"
+                android:layout_below="@id/textNom"
+                android:layout_alignLeft="@id/textNom"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/textType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textAdresse"
+                android:layout_alignLeft="@id/textAdresse"
+                android:layout_marginTop="10dp"
+                android:text="Cuisine "/>
+            <!-- Note -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/textNom"
+                android:layout_below="@id/textType"
+                android:layout_marginTop="10dp"
+                style="@android:style/Widget.Holo.RatingBar"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1.0" />
+
+            <!-- Cout moyen: -->
+            <TextView
+                android:id="@+id/TextCout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/ratingBar"
+                android:layout_below="@id/ratingBar"
+                android:layout_marginTop="10dp"
+                android:text="Prix en moyenne: \n\t\t"/>
+
+
+           <!-- Numero telephone: -->
+            <ImageButton
+                android:id="@+id/textPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telehone: "
+                android:src="@android:drawable/ic_menu_call"
+                android:layout_below="@+id/TextCout"
+                android:layout_alignLeft="@+id/TextCout"
+                android:layout_alignStart="@+id/TextCout"
+                android:onClick="onClickCall"/>
+
+            <!-- Site web: -->
+            <Button
+                android:id="@+id/textSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web"
+                android:padding="5dp"
+                android:textSize="19dp"
+                android:clickable="true"
+                android:onClick="onClickSiteWeb"
+                android:layout_below="@+id/TextCout"
+                android:layout_toRightOf="@+id/textPhone"
+                android:layout_toEndOf="@+id/textPhone"
+                android:layout_alignBottom="@id/textPhone"/>
+
+            <ImageButton
+                android:id="@+id/boutonGoogleMaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/textSite"
+                android:layout_toRightOf="@id/textSite"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:onClick="onClickGMaps"
+                />
+            <!-- Avis utilisateur: -->
+            <TextView
+                android:id="@+id/textAvis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avis Utilisateur: "
+                android:layout_below="@id/textSite"
+                android:layout_alignLeft="@id/textAdresse"
+                android:layout_marginTop="20dp"/>
+            <EditText
+                android:id="@+id/editAvis"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textAvis"
+                android:layout_alignLeft="@id/textAvis"
+                android:maxHeight="300dp"
+                android:maxLines="4"
+                android:hint="Que pensez-vous sur ce restaurant?"
+                />
+
+            <!-- Boutons: -->
+            <Button
+                android:id="@+id/boutonValider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editAvis"
+                android:layout_alignLeft="@id/editAvis"
+                android:layout_marginTop="10dp"
+                android:text="Valider"
+                android:onClick="onClickValider"/>
+
+            <Button
+                android:id="@+id/boutonRetour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/boutonValider"
+                android:layout_toRightOf="@id/boutonValider"
+                android:text="Retour"
+                android:onClick="onClickRetour"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

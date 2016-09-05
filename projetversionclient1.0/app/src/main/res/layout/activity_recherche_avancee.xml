@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ecc.projetversionclient10.RechercheAvancee">
+
+    <!-- NOM -->
+    <!-- Nom -->
+    <TextView
+        android:id="@+id/idTextNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Nom:" />
+
+    <EditText
+        android:id="@+id/idEditNom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/idTextNom"
+        android:layout_marginRight="10dp"
+        android:hint="Nom Restaurant"
+        android:layout_toRightOf="@+id/idTextType"
+        android:layout_toEndOf="@+id/idTextType" />
+    <!-- Type -->
+    <TextView
+        android:id="@+id/idTextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idTextNom"
+        android:layout_below="@id/idTextNom"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Type de cuisine:" />
+
+    <EditText
+        android:id="@+id/idEditType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/idTextType"
+        android:layout_below="@id/idEditNom"
+        android:hint="Type du Restaurant"
+        android:layout_alignRight="@+id/idEditNom"
+        android:layout_alignEnd="@+id/idEditNom"
+        android:layout_toRightOf="@+id/idTextCout"
+        android:layout_toEndOf="@+id/idTextCout" />
+    <!-- Note Min -->
+    <TextView
+        android:id="@+id/idTextNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idTextNom"
+        android:layout_below="@id/idTextType"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="Note /5:" />
+
+    <RatingBar
+        android:id="@+id/idEditNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="0"
+        android:layout_alignTop="@id/idTextNote"
+        android:layout_below="@id/idEditType"
+        android:layout_toRightOf="@id/idTextNote"
+        android:hint="0 - 5" />
+    <!-- Cout Moyen -->
+    <TextView
+        android:id="@+id/idTextCout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idTextNom"
+        android:layout_below="@id/idTextNote"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="Cout Minimal:" />
+
+    <EditText
+        android:id="@+id/idEditCout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/idTextCout"
+        android:layout_below="@id/idEditNote"
+        android:layout_toRightOf="@id/idTextCout"
+        android:layout_alignRight="@+id/idEditNom"
+        android:layout_alignEnd="@+id/idEditNom" />
+    <TextView
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idTextNom"
+        android:layout_below="@id/idTextCout"
+        android:text="Distance min à (M): "
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/editDistance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/idEditCout"
+        android:layout_below="@id/idEditCout"
+        android:hint="Distance en M"
+        />
+
+    <!-- Boutons -->
+    <Button
+        android:id="@+id/boutonLancerRecherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Recherche"
+        android:onClick="onClickLancerRecherche"/>
+    <Button
+        android:id="@+id/boutonAnnuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/boutonLancerRecherche"
+        android:layout_alignTop="@id/boutonLancerRecherche"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBottom="@id/boutonLancerRecherche"
+        android:text="Anuuler"
+        android:onClick="onClickAnnuler"/>
+
+</RelativeLayout>
