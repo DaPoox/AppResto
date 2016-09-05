@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="champs_array">
+        <item>nom</item>
+        <item>adresse</item>
+        <item>numero_de_telephone</item>
+        <item>adresse_de_site_internet</item>
+        <item>note_dappreciation</item>
+        <item>cout_moyen_du_repas</item>
+        <item>periode_ouverture</item>
+        <item>type_de_cuisine</item>
+    </string-array>
+
+    <string-array name="uri_array">
+        <item>content://com.example.ecc.tp6.dico/nomrest_nom/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_adresse/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_numero_de_telephone/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_adresse_de_site_internet/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_note_dappreciation/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_localisation_geographique/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_cout_moyen_du_repas/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_periode_ouverture/</item>
+        <item>content://com.example.ecc.tp6.dico/nomrest_type_de_cuisine/</item>
+    </string-array>
+
+    <string-array name="uri_recherche">
+        <item>content://com.example.projetvesrion10.rest/recherche/</item>
+        <item>content://com.example.projetvesrion10.rest/recherche/nom/</item>
+        <item>content://com.example.projetvesrion10.rest/recherche/type</item>
+        <item>content://com.example.projetvesrion10.rest/recherche/note</item>
+        <item>content://com.example.projetvesrion10.rest/recherche/cout_moyen</item>
+    </string-array>
+</resources>
